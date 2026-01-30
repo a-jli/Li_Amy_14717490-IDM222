@@ -26,8 +26,8 @@
 }
 
 :root {
-    --light-text: #F7FFF4;
-    --dark-text: #FFFFFF;
+    --light-text: #070607;
+    --dark-text: #F7FFF4;
 
 /*light mode*/
     --light-bg: #F6FFF1;
@@ -48,7 +48,8 @@
 
 body {
     font-family: 'ubuntu_monoregular', Georgia, 'Times New Roman', Times, serif;
-     background-color: var(--light-bg);
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
 }
 
 nav {
@@ -69,36 +70,38 @@ a {
 }
 
 .main-container {
-    background-color:var(--light-container);
+    background-color:var(--dark-container);
     border-radius: 2px;
     margin-bottom: 2rem;
+    padding: 2rem;
 }
 
 .logo_banner {
     max-width: 100%;
+    margin-bottom: 1rem;
 }
 
 .nav-bar-wrapper {
     list-style-type: none;
     display: flex;
-    gap: 0.1rem;
+    gap: 0.5rem;
     justify-content: space-between;
 }
 
 .nav-bar-button {
-    background-color: var(--light-button);
+    background-color: var(--dark-button);
     margin: 0px;
-    padding: 0.8rem;
+    padding: 0.8rem 1.4rem 0.8rem 1.4rem;
     border-radius: 2px;
 }
 
 .nav-bar-button:hover {
-    background-color: var(--light-button-press);
+    background-color: var(--dark-button-press);
 }
 
 .nav-bar-button a, a:visited {
     font-size: 1.3rem;
-    color: var(--light-text);
+    color: var(--dark-text);
 }
 
 .main-image {
@@ -111,13 +114,13 @@ a {
     padding: 1rem;
 }
 .main-text a:link, .main-text a:visited {
-    color: var(--light-link);
+    color: var(--dark-link);
     font-style: italic;
     font-weight: bold;
 }
 
 .main-container a:link, .main-text a:visited {
-    color: var(--light-link);
+    color: var(--dark-link);
     font-style: italic;
     font-weight: bold;
 }
@@ -125,21 +128,31 @@ a {
 
 
 @media screen and (min-width: 700px) {
+    .logo_banner {
+        max-width: 100%;
+    }
     .container {
         width: 80vw;
         max-width: 1280px;
         display: flex;
         flex-direction: row;
+        margin-top: 2rem;
     }
     nav {
-        width: 600px;
+        display: block;
+        min-width: 200px;
+        padding: 0;
+        margin-right: 2rem;
     }
     .nav-bar-wrapper {
         display: flex;
         flex-direction: column;
     }
     .nav-bar-button {
-        padding: 0;
+        padding: 0.5rem;
+        margin-top: 1rem;
+        font-size: 2rem;
+
     }
 
     .logo_banner {
@@ -149,6 +162,8 @@ a {
     main {
         display: flex;
         flex-direction: row-reverse;
+        padding: 2rem;
+        font-size: 1.2rem;
     }
     .main-image {
         min-width: 40%;
