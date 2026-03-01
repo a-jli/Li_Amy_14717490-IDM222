@@ -3,31 +3,76 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>title</title>
+    <title>Amy Li - Contact</title>
     <link rel="stylesheet" href="assets/styles/normalize.css">
     <link rel="stylesheet" href="assets/styles/main.css">
 </head>
 <body>
     <div class="container">
-        <nav>
-            <a href="index.html"><img class = "logo_banner" alt="placeholder image" src="assets/images/placeholder.png"></a>
-            <div class="nav-bar-wrapper">
-                <a class="nav-bar-button" href="gallery.html">GALLERY</a>
-                <a class="nav-bar-button" href="projects.html">PROJECTS</a>
-                <a class="nav-bar-button" href="contact.html">CONTACT</a>
-            </div>
-        </nav>
-        <div class="main-container">
-            <main>
-                <img class="main-image" alt="placeholder" src="assets/images/about-image.PNG">
-                <div class="main-text">
-                    <h2>Contact</h2>
-                    <a href="">Linkedin</a>
-                    <a href="">Email</a>
-                    <a href="">Resume</a>
+            <a href="index.html">
+                <picture class="logo_banner">
+                    <source media="(max-width: 900px)" srcset="assets/images/header-image-700.png">
+                    <source media="(max-width: 1000px)" srcset="assets/images/header-image-900.png">
+                    <source media="(max-width: 1500px)" srcset="assets/images/header-image-1200.png">
+                    <source media="(max-width: 1700px)" srcset="assets/images/header-image-1500.png">
+                    <img src="assets/images/header-image-longest.png"
+                        alt="An frog-eating rat snake."
+                        sizes="(max-width: 1900px) 100vw, 80vw"
+                    loading="lazy">
+                </picture>
+            </a>
+        <div class="nav-and-main-wrapper">
+            <nav>
+                <div class="nav-bar-wrapper">
+                    <a class="nav-bar-button" href="gallery.html">Gallery</a>
+                    <a class="nav-bar-button" href="projects.html">Projects</a>
+                    <a class="nav-bar-button" href="contact.html">Contact</a>
                 </div>
-            </main>
+            </nav>
+            <div class="main-container">
+                <main>
+                    <picture class="main-image">
+                        <source media="(max-width: 700px)"
+                                srcset="assets/images/contact-image-small.png">
+                        <source media="(max-width: 1000px)"
+                                srcset="assets/images/contact-image-medium.png">
+                        <img src="assets/images/contact-image-widest.png"
+                            alt="An illustration of a person wearing a backpack and holding a sketchbook. There is text labelling the image as 'About'."
+                            sizes="(max-width: 1080px) 100vw,
+                                    80vw"
+                            loading="lazy">
+                    </picture>
+                    <div class="main-text">
+                        <h2>Contact Me</h2>
+                        <p><a href="https://www.linkedin.com/in/amy-li-0a557034b/" target="_blank">Linkedin</a></p>
+                        <p><a href="mailto:ajiaheli08@gmail.com" target="_blank">ajiaheli08@gmail.com</a></p>
+                        <p><a href="assets/images/Li_Amy_Resume.pdf" target="_blank">Resume</a></p>
+                    </div>
+                </main>
+            </div>
         </div>
     </div>
 </body>
 </html>
+<!-- 
+                <main>
+                    <picture class="main-image">
+                        <source media="(max-width: 700px)"
+                                srcset="assets/images/contact-image-small.png">
+                        <source media="(max-width: 1000px)"
+                                srcset="assets/images/contact-image-medium.png">
+                        <img src="assets/images/contact-image-widest.png"
+                            alt="An illustration of a person wearing a backpack and holding a sketchbook. There is text labelling the image as 'About'."
+                            sizes="(max-width: 1080px) 100vw,
+                                    80vw"
+                            loading="lazy">
+                    </picture>
+                    <div class="main-text">
+                        <h2>Contact Me</h2>
+                        <p><a href="https://www.linkedin.com/in/amy-li-0a557034b/" target="_blank">Linkedin</a></p>
+                        <p><a href="mailto:ajiaheli08@gmail.com" target="_blank">ajiaheli08@gmail.com</a></p>
+                        <p><a href="assets/images/Li_Amy_Resume.pdf" target="_blank">Resume</a></p>
+                    </div>
+                </main> 
+                
+-->

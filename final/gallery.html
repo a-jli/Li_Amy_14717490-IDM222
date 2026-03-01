@@ -3,83 +3,132 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>title</title>
+    <title>Amy Li - Gallery</title>
     <link rel="stylesheet" href="assets/styles/normalize.css">
     <link rel="stylesheet" href="assets/styles/main.css">
 </head>
 <body>
     <div class="container">
-        <nav>
-            <a href="index.html"><img class = "logo_banner" alt="placeholder image" src="assets/images/placeholder.png"></a>
-            <div class="nav-bar-wrapper">
-                <a class="nav-bar-button" href="gallery.html">GALLERY</a>
-                <a class="nav-bar-button" href="projects.html">PROJECTS</a>
-                <a class="nav-bar-button" href="contact.html">CONTACT</a>
-            </div>
-        </nav>
+            <a href="index.html">
+                <picture class="logo_banner">
+                    <source media="(max-width: 900px)" srcset="assets/images/header-image-700.png">
+                    <source media="(max-width: 1000px)" srcset="assets/images/header-image-900.png">
+                    <source media="(max-width: 1500px)" srcset="assets/images/header-image-1200.png">
+                    <source media="(max-width: 1700px)" srcset="assets/images/header-image-1500.png">
+                    <img src="assets/images/header-image-longest.png"
+                        alt="An frog-eating rat snake."
+                        sizes="(max-width: 1900px) 100vw, 80vw"
+                    loading="lazy">
+                </picture>
+            </a>
+        <div class="nav-and-main-wrapper">
+            <nav>
+                <div class="nav-bar-wrapper">
+                    <a class="nav-bar-button" href="gallery.html">Gallery</a>
+                    <a class="nav-bar-button" href="projects.html">Projects</a>
+                    <a class="nav-bar-button" href="contact.html">Contact</a>
+                </div>
+            </nav>
         <main>
         <div class="main-container">
             <h2>Commissioned Works</h2>
+            <div class="gallery-wrapper">
                 <div class="gallery-thumbnail-wrapper">
-                    <img class="gallery-thumbnail" alt="placeholder" src="assets/images/commission_argot.png">
+                    <img class="gallery-thumbnail" alt="placeholder" src="assets/images/commission_argot.png" loading="lazy">
                 </div>
                 <div class="gallery-thumbnail-wrapper">
-                    <img class="gallery-thumbnail" alt="placeholder" src="assets/images/commission_cicadaqueenVvertical_2.png">
+                    <img class="gallery-thumbnail" alt="placeholder" src="assets/images/commission_cicadaqueenVvertical_2.png" loading="lazy">
                 </div>
                 <div class="gallery-thumbnail-wrapper">
-                    <img class="gallery-thumbnail" alt="placeholder" src="assets/images/commission_fyomoblogs.png">
+                    <img class="gallery-thumbnail" alt="placeholder" src="assets/images/commission_fyomoblogs.png" loading="lazy">
                 </div>
               <div class="gallery-thumbnail-wrapper">
-                    <img class="gallery-thumbnail" alt="placeholder" src="assets/images/commission_hollowmoon.png">
+                    <img class="gallery-thumbnail" alt="placeholder" src="assets/images/commission_hollowmoon.png" loading="lazy">
                 </div>
                 <div class="gallery-thumbnail-wrapper">
-                    <img class="gallery-thumbnail" alt="placeholder" src="assets/images/commission_kiloueka.png">
+                    <img class="gallery-thumbnail" alt="placeholder" src="assets/images/commission_kiloueka.png" loading="lazy">
                 </div>
                 <div class="gallery-thumbnail-wrapper">
-                    <img class="gallery-thumbnail" alt="placeholder" src="assets/images/commission_loirfall.png">
+                    <img class="gallery-thumbnail" alt="placeholder" src="assets/images/commission_loirfall.png" loading="lazy">
                 </div>
                 <div class="gallery-thumbnail-wrapper">
-                    <img class="gallery-thumbnail" alt="placeholder" src="assets/images/commission_stilljustvanilla.png">
+                    <img class="gallery-thumbnail" alt="placeholder" src="assets/images/commission_stilljustvanilla.png" loading="lazy">
                 </div>
-
+                <div class="gallery-thumbnail-wrapper">
+                    <img class="gallery-thumbnail" alt="placeholder" src="assets/images/tafp_scenes_lemmy.png" loading="lazy">
+                </div>
+                <div class="gallery-thumbnail-wrapper">
+                    <img class="gallery-thumbnail" alt="placeholder" src="assets/images/tafp_scenes_seosane.png" loading="lazy">
+                </div>
+            </div>
+                
+            </div>
+            <div class="main-container">
             <h2>Concept Art</h2>
+                <div class="gallery-wrapper">
+                    <div class="gallery-thumbnail-wrapper" class="wide-image">
+                        <img class="gallery-thumbnail" alt="placeholder" src="assets/images/dawn_banner.png" loading="lazy">
+                    </div>
+                    <div class="gallery-thumbnail-wrapper">
+                        <img class="gallery-thumbnail" alt="placeholder" src="assets/images/dawn_lineup_camilla_squad.png" loading="lazy">
+                    </div>
+                    <div class="gallery-thumbnail-wrapper">
+                        <img class="gallery-thumbnail" alt="placeholder" src="assets/images/dawn_lineup_chaelin.png" loading="lazy">
+                    </div>
                 <div class="gallery-thumbnail-wrapper">
-                    <img class="gallery-thumbnail" alt="placeholder" src="assets/images/dawn_banner.png">
+                        <img class="gallery-thumbnail" alt="placeholder" src="assets/images/dawn_lineup_dawn.png" loading="lazy">
+                    </div>
+                    <div class="gallery-thumbnail-wrapper">
+                        <img class="gallery-thumbnail" alt="placeholder" src="assets/images/dawn_lineup_girlsnight.png" loading="lazy">
+                    </div>
+                    <div class="gallery-thumbnail-wrapper">
+                        <img class="gallery-thumbnail" alt="placeholder" src="assets/images/dawnmenu.png" loading="lazy">
+                    </div>
+                    <div class="gallery-thumbnail-wrapper">
+                        <img class="gallery-thumbnail" alt="placeholder" src="assets/images/mandible_chira_concepts.png" loading="lazy">
+                    </div>
+                    <div class="gallery-thumbnail-wrapper">
+                        <img class="gallery-thumbnail" alt="placeholder" src="assets/images/mandible_bug_hive_concepts.png" loading="lazy">
+                    </div>
+                    <div class="gallery-thumbnail-wrapper">
+                        <img class="gallery-thumbnail" alt="placeholder" src="assets/images/mandible_enemies_concepts.png" loading="lazy">
+                    </div>
+                    <div class="gallery-thumbnail-wrapper">
+                        <img class="gallery-thumbnail" alt="placeholder" src="assets/images/mandible_enemies_flamethrower_knifedog_concepts.png" loading="lazy">
+                    </div>
+                    <div class="gallery-thumbnail-wrapper">
+                        <img class="gallery-thumbnail" alt="placeholder" src="assets/images/slop_humanoid_enemies_concepts_3-1.png" loading="lazy">
+                    </div>
+                    <div class="gallery-thumbnail-wrapper">
+                        <img class="gallery-thumbnail" alt="placeholder" src="assets/images/slop_humanoid_enemies_concepts_3-2.png" loading="lazy">
+                    </div>
                 </div>
-                <div class="gallery-thumbnail-wrapper">
-                    <img class="gallery-thumbnail" alt="placeholder" src="assets/images/dawn_conceptbanner.png">
-                </div>
-                <div class="gallery-thumbnail-wrapper">
-                    <img class="gallery-thumbnail" alt="placeholder" src="assets/images/dawn_lineup_camilla_squad.png">
-                </div>
-                <div class="gallery-thumbnail-wrapper">
-                    <img class="gallery-thumbnail" alt="placeholder" src="assets/images/dawn_lineup_chaelin.png">
-                </div>
-              <div class="gallery-thumbnail-wrapper">
-                    <img class="gallery-thumbnail" alt="placeholder" src="assets/images/dawn_lineup_dawn.png">
-                </div>
-                <div class="gallery-thumbnail-wrapper">
-                    <img class="gallery-thumbnail" alt="placeholder" src="assets/images/dawn_lineup_girlsnight.png">
-                </div>
-                <div class="gallery-thumbnail-wrapper">
-                    <img class="gallery-thumbnail" alt="placeholder" src="assets/images/dawnmenu.png">
+            </div>
+
+            <div class="main-container">
+                <h2>PMVs</h2>
+                <div class="gallery-wrapper">
+                    <div class="video-wrapper">
+                        <video width="100%" controls poster="assets/images/108_thumbnail.png">
+                            <source src="assets/images/VSST108_final.mp4" type="video/mp4" >
+                        Your browser does not support the video tag.
+                        </video>
+                        <p class="caption">VSST108 Final Project</p>
+                        <p>This was for a class final textexttext</p>
+                    </div>
+                    <div class="video-wrapper">
+                        <video width="100%" controls poster="assets/images/109_thumbnail.png">
+                            <source src="assets/images/VSST109_final.mp4" type="video/mp4" >
+                        Your browser does not support the video tag.
+                        </video>
+                        <p class="caption">VSST109 Final Project</p>
+                        <p>This was for a class final textexttext</p>
+                    </div>
                 </div>
 
-                <div class="gallery-thumbnail-wrapper">
-                    <img class="gallery-thumbnail" alt="placeholder" src="assets/images/mandible_chira_concepts.png">
-                </div>
-                <div class="gallery-thumbnail-wrapper">
-                    <img class="gallery-thumbnail" alt="placeholder" src="assets/images/mandible_bug_hive_concepts.png">
-                </div>
-                <div class="gallery-thumbnail-wrapper">
-                    <img class="gallery-thumbnail" alt="placeholder" src="assets/images/mandible_enemies_concepts.png">
-                </div>
-                <div class="gallery-thumbnail-wrapper">
-                    <img class="gallery-thumbnail" alt="placeholder" src="assets/images/mandible_enemies_flamethrower_knifedog_concepts.png">
-                </div>
-                </div>
-            <h2>PMVs</h2>
-            
+                    
+            </div>
+
         </div>
         </main>
         </div>

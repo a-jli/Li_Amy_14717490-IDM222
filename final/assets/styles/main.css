@@ -53,7 +53,7 @@ body {
 }
 
 nav {
-    padding: 2rem 0rem 1rem 0rem;
+    padding-bottom: 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,7 +68,27 @@ a {
 h2 {
     background-color: #3c1400;
     padding: 0.5rem;
-}s
+    color: var(--dark-header);
+    font-weight: 600;
+    margin: 0;
+}
+
+h3 {
+    color: var(--dark-header);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.caption {
+    font-size: 0.8rem;
+    color: rgb(255, 213, 182);
+    margin-bottom: 0px;
+}
+
+
+
+/* Body */
 
 .container {
     width: 100vw;
@@ -81,29 +101,30 @@ h2 {
 .main-container {
     background-color:var(--dark-container);
     flex-direction: column;
-    border-radius: 2px;
     margin: 1rem;
     margin-bottom: 2rem;
     padding: 1rem;
+    gap: 1rem;
+    justify-content: center;
 }
 
 .logo_banner {
     max-width: 100%;
-    margin: 1rem 0 1rem 0;
+    margin: 1rem 0 0 0;
 }
 
 .nav-bar-wrapper {
-    list-style-type: none;
+    margin: 0 1rem 0 1rem;
     display: flex;
-    gap: 0.2rem;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
 .nav-bar-button {
     background-color: var(--dark-button);
-    margin: 0px;
-    padding: 0.8rem 1.4rem 0.8rem 1.4rem;
-    border-radius: 1px;
+    width: 100%;
+    padding: 0.6rem;
+    text-align: center;
 }
 
 .nav-bar-button:hover {
@@ -118,8 +139,12 @@ h2 {
 .main-image {
     margin: auto;
     width: 100vw;
-    
+    img {
+        width: 100%;
+    }
 }
+
+
 
 .main-text {
     display: flex;
@@ -139,6 +164,45 @@ h2 {
 
 
 
+
+
+/*project pages*/
+
+.project-banner {
+    display: block;
+    width: 100%;
+    margin: auto;
+    margin: 1rem 0 1rem 0;
+}
+
+.project-example-image{
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+
+.gallery-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;   
+    }
+
+.gallery-thumbnail-wrapper {
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    overflow:hidden;
+    margin: 1rem;
+}
+
+.gallery-thumbnail {
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
 @media screen and (min-width: 700px) {
     .logo_banner {
         max-width: 100%;
@@ -155,14 +219,25 @@ h2 {
         padding: 0.5rem;
         margin-top: 1rem;
         font-size: 2rem;
-
+    } 
+    .gallery-thumbnail-wrapper {
+        width: 280px;
     }
-
+    /*How do I get this to crop nicely.....*/
+    video {
+        width: 300px;
+    }
 }
 
 @media screen and (min-width: 1280px) {
     .container {
-        flex-direction: row;
+        padding: 1rem;
+    }
+    .main-container {
+        width: 100%;
+    }
+    .logo_banner {
+        width: 100%;
     }
     .nav-bar-wrapper {
         display: flex;
@@ -171,51 +246,7 @@ h2 {
     .nav-and-main-wrapper {
         display: flex;
     }
-        /* <nav>
-            <a href="index.html">
-                <picture class="logo_banner">
-                    <source media="(max-width: 900px)" srcset="assets/images/header-image-700.png">
-                    <source media="(max-width: 1000px)" srcset="assets/images/header-image-900.png">
-                    <source media="(max-width: 1500px)" srcset="assets/images/header-image-1200.png">
-                    <source media="(max-width: 1700px)" srcset="assets/images/header-image-1500.png">
-                    <img src="assets/images/header-image-longest.png"
-                        alt="An frog-eating rat snake."
-                        sizes="(max-width: 1900px) 100vw, 80vw"
-                    loading="lazy">
-                </picture>
-            </a>
-            <div class="nav-bar-wrapper">
-                <a class="nav-bar-button" href="gallery.html">GALLERY</a>
-                <a class="nav-bar-button" href="projects.html">PROJECTS</a>
-                <a class="nav-bar-button" href="contact.html">CONTACT</a>
-            </div>
-        </nav> */
+    video {
+        width: 500px;
+    }
 }
-
-/*project pages*/
-
-.project-banner {
-    display: block;
-    width: 80%;
-    margin: auto;
-}
-
-.project-example-image{
-    display: block;
-    width: 80%;
-    margin: auto;
-}
-
-.gallery-thumbnail-wrapper {
-    width: 100%px;
-    object-fit: cover;
-    overflow:hiddens;
-    margin: 1rem;
-
-}
-.gallery-thumbnail {
-    width: 100%;
-    object-fit: cover;
-}
-
-

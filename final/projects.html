@@ -3,32 +3,46 @@
 <head>
     <meta charset="UTF=8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>Amy Li - Projects</title>
     <link rel="stylesheet" href="assets/styles/normalize.css">
     <link rel="stylesheet" href="assets/styles/main.css">
 </head>
 <body>
     <div class="container">
-        <nav>
-            <a href="index.html"><img class = "logo_banner" alt="placeholder image" src="assets/images/placeholder.png"></a>
-            <div class="nav-bar-wrapper">
-                <a class="nav-bar-button" href="gallery.html">GALLERY</a>
-                <a class="nav-bar-button" href="projects.html">PROJECTS</a>
-                <a class="nav-bar-button" href="contact.html">CONTACT</a>
-            </div>
-        </nav>
+            <a href="index.html">
+                <picture class="logo_banner">
+                    <source media="(max-width: 900px)" srcset="assets/images/header-image-700.png">
+                    <source media="(max-width: 1000px)" srcset="assets/images/header-image-900.png">
+                    <source media="(max-width: 1500px)" srcset="assets/images/header-image-1200.png">
+                    <source media="(max-width: 1700px)" srcset="assets/images/header-image-1500.png">
+                    <img src="assets/images/header-image-longest.png"
+                        alt="An frog-eating rat snake."
+                        sizes="(max-width: 1900px) 100vw, 80vw"
+                    loading="lazy">
+                </picture>
+            </a>
+        <div class="nav-and-main-wrapper">
+            <nav>
+                <div class="nav-bar-wrapper">
+                    <a class="nav-bar-button" href="gallery.html">Gallery</a>
+                    <a class="nav-bar-button" href="projects.html">Projects</a>
+                    <a class="nav-bar-button" href="contact.html">Contact</a>
+                </div>
+            </nav>
         <div class="main-container">
+            <h2>Not Yet Dawn</h2>
             <img class="project-banner" alt="placeholder" src="assets/images/dawn_conceptbanner.png">
             <div class="main-text">
                 <p><a target="_blank" href="https://hollownub.itch.io/not-yet-dawn">Not Yet Dawn</a> is a rougelike where you play as a young vampire making her way back home after a night out. Balance life lost to sunlight with life gained by stealing your enemies' blood!</p>
-                <a href="projects-not-yet-dawn.html">Learn more about my work on Not Yet Dawn!</a>
+                <a href="projects-not-yet-dawn.html">Learn more about my work on Not Yet Dawn -></a>
             </div>            
         </div>
         <div class="main-container">
+            <h2>SPEKTRE</h2>
             <img class="project-banner" alt="placeholder" src="assets/images/mandible_conceptbanner.png">
             <div class="main-text">
                 <p><a target="_blank" href="https://egs.drexel.edu/dev-team/mandible-studios/">SPEKTRE</a> (“Spectre”) is a dark sci-fi shooter where you play as KN-38, a machine assassin battling for renown and revenge. You wield a versatile arsenal of guns and abilities, pitted against enemies who seek your head.</p>
-                <a href="projects-spektre.html">Learn more about my work on SPEKTRE</a>
+                <a href="projects-spektre.html">Learn more about my work on SPEKTRE -></a>
             </div>            
         </div>
     </div>
