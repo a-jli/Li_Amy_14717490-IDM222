@@ -10,7 +10,10 @@ console.log(closeButton)
 console.log(openButton)
 console.log(lightbox)
 
-//this isn't working, i think because it's a queryselectorall...?
+//this isn't working, i think because the openbutton a queryselectorall...? 
+//it does work when it is a queryselector 
+//but i'd like all the thumbnails to be clickable
+
 openButton.addEventListener ('click', () => {
     console.log('lightbox clicked');
      document.querySelector('.lightbox').style.display = 'flex';
