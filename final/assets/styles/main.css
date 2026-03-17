@@ -142,7 +142,9 @@ h3 {
     padding: 0.6rem;
     text-align: center;
     font-size: 1rem;
-    /* display: none; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-bar-button:hover {
@@ -428,9 +430,6 @@ video {
     }
     .nav-bar-button {
         padding: 1.6rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     .lightbox {
