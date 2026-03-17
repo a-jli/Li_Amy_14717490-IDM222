@@ -306,7 +306,9 @@ video {
 @media (prefers-color-scheme: light) {
     body {
         background-color: var(--light-bg);
-        color: var(--light-text);
+        p {
+            color: var(--light-text);
+        }
     }
     #project-desc, #project-desc-2 {
         color: var(--light-text);
