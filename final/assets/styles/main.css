@@ -24,42 +24,29 @@
     font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: var(--dark-bg);
-    }
-    .main-container {
-        background-color: var(--dark-container);
-    }
-    .nav-bar-button {
-        background-color: var(--dark-button);
-    }
-    .nav-bar-button:hover {
-        background-color: var(--dark-button-press);
-    }
-}
-
 :root {
+/*TEXT*/
     --light-text: #070607;
     --dark-text: #F7FFF4;
-
-/*light mode*/
-    --light-bg: #F6FFF1;
+/*LIGHT MODE*/
+    --light-bg: #dbc85d; /*F6FFF1*/
     --light-container: #FFEED7;
-    --light-button: #C53B00;
+    --light-button: #ad5100;
     --light-button-press: #FF995F;
-    --light-link: #015C68;
-    --light-header: #BAD91D;
- /*dark mode*/
+    --light-link: #b75200; /*015C68*/
+    --light-header: #af1f17;
+    --light-header-bg: #efed9d;
+ /*DARK MODE*/
  --dark-bg: #070607;
     --dark-container: #4A1900;
     --dark-button:#af1f17;
     --dark-button-press: #FFA661;
     --dark-link: #C6D0FF;
     --dark-header: #BAD91D;
+    --dark-header-bg: #3c1400;
 }
 
-
+/*MISC/MAIN STUFF*/
 body {
     font-family: 'ubuntu_monoregular', Georgia, 'Times New Roman', Times, serif;
     background-color: var(--dark-bg);
@@ -80,33 +67,33 @@ a {
 }
 
 h2 {
-    background-color: #3c1400;
+    background-color: var(--dark-header-bg);
     padding: 0.5rem;
     color: var(--dark-header);
     font-weight: 600;
-    margin: 0;
+    margin: 0 0 1rem 0;
 }
 
 h3 {
     color: var(--dark-header);
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.6rem;
     margin: 0;
-    margin-bottom: 1rem;
+    margin: 1rem 0 0.5rem 0;
 }
 
 .caption {
-    font-size: 0.8rem;
+    padding-left: 2rem;
+    font-size: 100%;
     color: rgb(255, 213, 182);
-    margin-bottom: 0px;
+    margin-bottom: 1rem;
 }
 
 
 
-/* Body */
-
+/* BODY */
 .container {
-    width: 100vw;
+    width: 100%;
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -123,26 +110,39 @@ h3 {
     justify-content: center;
 }
 
+/*NAV AND HEADER*/
 .logo_banner {
-    margin: 1rem 0 0 0;
+    margin: 1rem 0 0.5rem 0;
     img{
         width: 100%;
     }
 }
+
 .nav-bar-wrapper {
     margin: 0 1rem 0 1rem;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 0.5rem;
+}
+
+.dropdown-button {
+    color: var(--dark-text);
+    background-color: var(--dark-button);
+    padding: 3rem;
+    display: flex;
 }
 
 .nav-bar-button {
     font-family: 'cousineregular', 'Times New Roman', Helvetica, sans-serif;
     background-color: var(--dark-button);
     width: 100%;
+    height: 38px;
+    margin: 0;
     padding: 0.6rem;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    /* display: none; */
 }
 
 .nav-bar-button:hover {
@@ -153,6 +153,8 @@ h3 {
     color: var(--dark-text);
 }
 
+
+/*MAIN CONTENT*/
 .main-image {
     margin: auto;
     width: 100vw;
@@ -161,29 +163,36 @@ h3 {
     }
 }
 
-
-
 .main-text {
+    margin: 0;
     display: flex;
     flex-direction: column;
+    line-height: 1.4;
 }
+
 .main-text a:link, .main-text a:visited {
     color: var(--dark-link);
     font-style: italic;
     font-weight: bold;
 }
 
-.main-container a:link, .main-text a:visited {
-    color: var(--dark-link);
-    font-style: italic;
-    font-weight: bold;
+
+button {
+    background-color: #3c140000;
+    padding: 0;
+    margin: 0;
+    border-style: none;
 }
 
 
 
+/*PROJECT PAGES*/
 
-
-/*project pages*/
+.projects-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
 
 .project-banner {
     display: block;
@@ -198,31 +207,39 @@ h3 {
     display: block;
     width: 100%;
     margin: auto;
+    border: 1px solid var(--light-button);
+
 }
 
 
-/*Gallery*/
+/*GALLERY*/
 .gallery-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;  
+    margin: 1rem;
     }
 
 .video-gallery-wrapper{
     display: flex;
     flex-direction: column;
 }
-
+video {
+    width: 100%;
+}
+.video-wrapper {
+    margin: 0;
+    padding: 0;
+}
 .gallery-thumbnail-wrapper {
-    width: calc(30cqw);
-    height: calc(30cqw);
+    width: 100%;
     overflow: hidden;
     cursor: pointer;
     border: 1px solid var(--light-button);
     object-fit: cover;
     overflow:hidden;
-    margin: 1rem;
+    margin: 0;
 }
 
 .gallery-thumbnail {
@@ -235,6 +252,7 @@ h3 {
     cursor: pointer;
 }
 
+/*GALLERY LIGHTBOX*/
 .lightbox {
     display: none;
     background-color: rgba(0, 0, 0, 0.8);
@@ -246,31 +264,103 @@ h3 {
     width: 100vw;
     height: 100vh;
     align-items: center;
+    justify-content: center;
 }
 
 .close-lightbox {
-    display: flex;
-    background-color: #af1f17;
-    height: 36px;
-    width: 36px;
+    background-color: var(--dark-button);
+    border-radius: 0.2rem;
+    font-size: 1.5rem;
+    height: 38px;
+    width: 42px;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    justify-self: flex-start;
-    align-self: flex-start;
+    position: fixed;
+    right: 1.5rem;
+    top: 1.5rem;
+}
+
+.close-lightbox:hover {
+    background-color: var(--dark-button-press);
 }
 
 .lightbox-image {
     align-self: center;
     max-height: 90vh;
-    max-width: 40vw;
+    max-width: 90vw;
 }
 
 .lightbox-text {
     justify-self: flex-end;
+    max-width: 80ch;
+    min-width: 10ch;
 }
 
+
+/*MEDIA QUERIES*/
+
+/*COLOR SCHEME*/
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: var(--light-bg);
+        color: var(--light-text);
+    }
+    #project-desc, #project-desc-2 {
+        color: var(--light-text);
+    }
+    .main-text a:link, .main-text a:visited {
+        color: var(--light-link);
+        font-style: italic;
+        font-weight: bold;
+    }
+    .gallery-thumbnail-wrapper {
+       border: 1px solid var(--dark-header);
+    }
+    h2 {
+        background-color: var(--light-header-bg);
+        color: var(--light-header);
+    }
+    h3 {
+        color: var(--light-header);
+    }
+    .main-container {
+        background-color: var(--light-container);
+    }
+    .nav-bar-button {
+        color: var(--light-text);
+        background-color: var(--light-button);
+    }
+    .nav-bar-button:hover {
+        background-color: var(--light-button-press);
+    }
+
+    .lightbox-text {
+        color: var(--dark-text);
+    }
+    .lightbox-image-title {
+        color: var(--dark-header);
+    }
+    .close-lightbox {
+        background-color:var(--light-button);
+        color: var(--dark-text);
+
+    }
+    .close-lightbox:hover {
+        background-color:var(--light-button-press);
+    }
+    .caption {
+        color: #ad5100;
+    }
+}
+
+/*RESPONSIVE*/
+
+
 @media screen and (min-width: 700px) {
+    body {
+        font-size: 110%;
+    }
     .logo_banner {
         max-width: 100%;
     }
@@ -282,11 +372,19 @@ h3 {
         min-width: 200px;
         padding: 0;
     }
+    .nav-bar-wrapper {
+        flex-direction: row;
+    }
     .nav-bar-button {
         padding: 0.5rem;
         margin-top: 1rem;
         font-size: 1.5rem;
     } 
+
+    .gallery-thumbnail-wrapper {
+        width: 35cqw;
+        height: 35cqw; 
+    }
     
     .video-gallery-wrapper{
     display: flex;
@@ -294,18 +392,27 @@ h3 {
     justify-content: space-between;
     gap: 1rem;
     }
-    /*How do I get this to crop nicely.....*/
-    video {
-        width: 35cqw;
+
+    .video-wrapper {
+        width: 100%;
     }
 }
 
 @media screen and (min-width: 1280px) {
+    body {
+        font-size: 130%;
+    }
+    .container {
+        padding: 1rem 3rem 1rem 3rem;
+        margin-top: 0;
+    }
     .main-container {
         width: 80vw;
+        padding: 1.5rem 2.5rem 1.5rem 2.5rem;
     }
     .nav-and-main-wrapper {
         width: 100vw;
+        gap: 1rem;
     }
     .logo_banner {
         width: 100%;
@@ -313,9 +420,80 @@ h3 {
     .nav-bar-wrapper {
         display: flex;
         flex-direction: column;
+        width: 12rem;;
     }
     .nav-and-main-wrapper {
         display: flex;
         width: 90vw;
+    }
+    .nav-bar-button {
+        padding: 1.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lightbox {
+        gap: 2.5rem;
+        flex-direction: row;
+        padding: 2rem 2.5rem 2rem 2.5rem;
+    }
+
+    .lightbox-image {
+    align-self: center;
+    max-height: 90vh;
+    max-width: 70vw;
+    }
+
+    .gallery-thumbnail-wrapper {
+        width: 22cqw;
+        height: 22cqw;
+    }
+
+    .video-gallery-wrapper {
+        justify-content: space-between;
+    }
+
+    .video-wrapper {
+        width: 40cqw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .caption {
+            align-self: flex-start;
+            margin-top: 0.5rem;
+        }
+
+        p{
+            margin: 0.2rem;
+        }
+    }
+    .projects-wrapper {
+        flex-direction: row;
+        padding-right: 1rem;
+        gap: 1.5rem;
+        justify-content: space-between;
+        width: 80vw;
+        a, .main-container {
+            max-width: 37cqw;
+            height: 95%;
+        }
+    }
+    .project-banner {
+        margin: 0;
+    }
+    .project-example-image {
+        margin: 2rem 1rem 0 1rem;
+    }
+}
+
+@media screen and (min-width:1600px) {
+        .projects-wrapper {
+        a, .main-container {
+            max-width: 40cqw;
+            height: 95%;
+        }
     }
 }
