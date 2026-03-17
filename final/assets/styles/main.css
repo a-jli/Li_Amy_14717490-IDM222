@@ -332,7 +332,7 @@ video {
         background-color: var(--light-container);
     }
     .nav-bar-button {
-        color: var(--light-text);
+        color: var(--dark-text);
         background-color: var(--light-button);
     }
     .nav-bar-button:hover {
@@ -359,8 +359,6 @@ video {
 }
 
 /*RESPONSIVE*/
-
-
 @media screen and (min-width: 700px) {
     body {
         font-size: 110%;
@@ -414,10 +412,6 @@ video {
         width: 80vw;
         padding: 1.5rem 2.5rem 1.5rem 2.5rem;
     }
-    .nav-and-main-wrapper {
-        width: 100vw;
-        gap: 1rem;
-    }
     .logo_banner {
         width: 100%;
     }
@@ -427,19 +421,18 @@ video {
         width: 12rem;;
     }
     .nav-and-main-wrapper {
+        gap: 1rem;
         display: flex;
         width: 90vw;
     }
     .nav-bar-button {
         padding: 1.6rem;
     }
-
     .lightbox {
         gap: 2.5rem;
         flex-direction: row;
         padding: 2rem 2.5rem 2rem 2.5rem;
     }
-
     .lightbox-image {
     align-self: center;
     max-height: 90vh;
@@ -450,23 +443,19 @@ video {
         width: 22cqw;
         height: 22cqw;
     }
-
     .video-gallery-wrapper {
         justify-content: space-between;
     }
-
     .video-wrapper {
         width: 40cqw;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
         .caption {
             align-self: flex-start;
             margin-top: 0.5rem;
         }
-
         p{
             margin: 0.2rem;
         }
