@@ -51,6 +51,7 @@ body {
     font-family: 'ubuntu_monoregular', Georgia, 'Times New Roman', Times, serif;
     background-color: var(--dark-bg);
     color: var(--dark-text);
+    transition: 0.3s ease, color 0.2s ease;
 }
 
 nav {
@@ -89,6 +90,22 @@ h3 {
     margin-bottom: 1rem;
 }
 
+.lighting-toggle-button {
+    font-family: 'cousineregular', 'Times New Roman', Helvetica, sans-serif;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    height: 38px;
+    width: 100%;
+    padding: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lighting-toggle-button:hover{
+    background-color: var(--dark-button-press);
+    cursor: pointer;
+}
 
 
 /* BODY */
@@ -303,6 +320,123 @@ video {
 /*MEDIA QUERIES*/
 
 /*COLOR SCHEME*/
+.light-mode {
+    background-color: var(--light-bg);
+    p {
+        color: var(--light-text);
+    }
+     #project-desc, #project-desc-2 {
+    color: var(--light-text);
+    }
+    .main-text a:link, .main-text a:visited {
+        color: var(--light-link);
+        font-style: italic;
+        font-weight: bold;
+    }
+    .lighting-toggle-button {
+        background-color: var(--dark-bg);
+        color: var(--dark-text)
+    }
+    .gallery-thumbnail-wrapper {
+       border: 1px solid var(--dark-header);
+    }
+    h2 {
+        background-color: var(--light-header-bg);
+        color: var(--light-header);
+    }
+    h3 {
+        color: var(--light-header);
+    }
+    .main-container {
+        background-color: var(--light-container);
+    }
+    .nav-bar-button {
+        color: var(--dark-text);
+        background-color: var(--light-button);
+    }
+    .nav-bar-button:hover {
+        background-color: var(--light-button-press);
+    }
+
+    .lightbox-text {
+        color: var(--dark-text);
+    }
+    .lightbox-image-title {
+        color: var(--dark-header);
+    }
+    .lightbox-image-desc {
+        color: var(--dark-text)
+    }
+    .close-lightbox {
+        background-color:var(--light-button);
+        color: var(--dark-text);
+
+    }
+    .close-lightbox:hover {
+        background-color:var(--light-button-press);
+    }
+    .caption {
+        color: #ad5100;
+    }
+}
+
+.dark-mode {
+    background-color: var(--dark-bg);
+    p {
+        color: var(--dark-text);
+    }
+     #project-desc, #project-desc-2 {
+    color: var(--dark-text);
+    }
+    .main-text a:link, .main-text a:visited {
+        color: var(--dark-link);
+        font-style: italic;
+        font-weight: bold;
+    }
+    .lighting-toggle-button {
+        background-color: var(--light-bg);
+        color: var(--light-text)
+    }
+    .gallery-thumbnail-wrapper {
+       border: 1px solid var(--light-button);
+    }
+    h2 {
+        background-color: var(--dark-header-bg);
+        color: var(--dark-header);
+    }
+    h3 {
+        color: var(--dark-header);
+    }
+    .main-container {
+        background-color: var(--dark-container);
+    }
+    .nav-bar-button {
+        color: var(--dark-text);
+        background-color: var(--dark-button);
+    }
+    .nav-bar-button:hover {
+        background-color: var(--dark-button-press);
+    }
+
+    .lightbox-text {
+        color: var(--dark-text);
+    }
+    .lightbox-image-title {
+        color: var(--dark-header);
+    }
+    .close-lightbox {
+        background-color:var(--dark-button);
+        color: var(--dark-text);
+
+    }
+    .close-lightbox:hover {
+        background-color:var(--dark-button-press);
+    }
+    .caption {
+        color: rgb(255, 213, 182);
+    }
+}
+
 @media (prefers-color-scheme: light) {
     body {
         background-color: var(--light-bg);
@@ -338,12 +472,14 @@ video {
     .nav-bar-button:hover {
         background-color: var(--light-button-press);
     }
-
     .lightbox-text {
         color: var(--dark-text);
     }
     .lightbox-image-title {
         color: var(--dark-header);
+    }
+    .lightbox-image-desc {
+        color: var(--dark-text);
     }
     .close-lightbox {
         background-color:var(--light-button);
@@ -382,7 +518,12 @@ video {
         margin-top: 1rem;
         font-size: 1.5rem;
     } 
-
+    .lighting-toggle-button {
+        width: 30%;
+        padding: 1rem;
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
     .gallery-thumbnail-wrapper {
         width: 35cqw;
         height: 35cqw; 
@@ -427,6 +568,10 @@ video {
     }
     .nav-bar-button {
         padding: 1.6rem;
+    }
+    .lighting-toggle-button {
+        padding: 1.6rem;
+        width: 100%;
     }
     .lightbox {
         gap: 2.5rem;
